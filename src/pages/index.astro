@@ -1,0 +1,28 @@
+---
+import '../css/resets.css'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Astro</title>
+	</head>
+	<body>
+		<main>
+			<h1>Astro Playground</h1>
+			<button>Count: 0</button>
+		</main>
+	</body>
+</html>
+
+<script>
+	const button = document.querySelector('button') as HTMLButtonElement
+	let count = 0
+
+	button.addEventListener('click', () => {
+		count++
+		button.innerText = `Count: ${count}`
+	})
+</script>
